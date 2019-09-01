@@ -273,7 +273,7 @@ WARNING;
         ->mkdir($this->getConfigValue('repo.root') . '/.git/hooks')
         ->remove($project_hook)
         // phpcs:ignore
-        ->symlink($path_to_hook_source, $project_hook)
+        ->symlink($path_to_hook_source, $project_hook, true)
         ->stopOnFail()
         ->setVerbosityThreshold(VerbosityThresholdInterface::VERBOSITY_VERBOSE)
         ->run();
